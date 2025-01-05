@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -13,20 +14,23 @@ body {
 
 header {
     background-color: #91d0d7;
-    color: #fff;
+    text-align: left;
+    /* color: #fff;
     padding: 1em;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; */
 }
-
+footer {
+    text-align: center;
+}
 .menu-icon {
     font-size: 1.5em;
 }
 
 .intro {
     position: relative; /* 相対位置を基準 */
-    display: inline-block; /* 必要に応じて */
+    display: inline-block; 必要に応じて
 }
 
 img {
@@ -40,7 +44,8 @@ img {
     top: 50%; /* 縦方向の中央 */
     left: 40%; /* 横方向の中央 */
     transform: translate(-50%, -50%); /* 中央揃え */
-    color: #70605A; /* 文字色 */
+    color: #333; /* 文字色 */
+    -webkit-text-stroke: 1px #fff;
     font-size: 1.5em; /* フォントサイズ */
     font-weight: bold; /* 太字 */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* 影をつけて文字を見やすく */
@@ -64,8 +69,8 @@ img {
     padding-bottom: 10px;
     font-size: 50px;
     width: 100%;
-    background-color: #d3d3d3;
-    -top: -10px;
+    background-color: hsl(0, 0%, 83%);
+    
 }
 .images {
     background-color: #fbe4d0;
@@ -147,8 +152,27 @@ img {
     background-color: #91d0d7;
     padding: 2em 0;
     color: #fff;
+    gap: 30px;
 }
-
+.img-sp {
+    border-radius: 40%;
+    height: 300px;
+   margin-bottom: 20px;
+}
+@media screen and (min-width:768px) {
+    .img-sp {
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    .content {
+        flex-flow: column;
+    }
+    .text {
+        max-width: 400px;
+        padding-left: 10px;
+    }
+    }           
 .content .image {
     width: 150px;
     height: 150px;
@@ -156,15 +180,16 @@ img {
 }
 
 .content .text {
-    max-width: 400px;
+    max-width: 600px;
+    font-size: 25px;
 }
 
 footer {
     background-color: #333;
     color: #fff;
     /* text-align: center; */
-    padding: 1vh 0;
-    display: inline-flex;
+    /* padding: 1vh 0; */
+    /* display: inline-flex; */
     width: 100%;
 }
 

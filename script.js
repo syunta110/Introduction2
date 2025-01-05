@@ -21,4 +21,46 @@ window.addEventListener('scroll', () => {
         parallaxBackground.style.transform = `translateY(${scrollPosition * 0.5}px)`;
     }
 });
+// window.addEventListener('scroll', function(){
+//     const scroll = window.scrollY;
+//     const windowHeight = window.innerHeight;
+//     const boxes = document.querySelectorAll('.box');
+  
+//     boxes.forEach(function(box) {
+//       const distanceToBox = box.offsetTop;
+//       if(scroll + windowHeight > distanceToBox) {
+//         box.classList.add('is-active');
+//       }
+//     });
+//   });
+
+
+  
+// 初回ロード時の画面幅をチェック
+const isMobile = window.innerWidth <= 768;
+
+// スクロールイベントリスナー
+window.addEventListener('scroll', function () {
+  const scroll = window.scrollY;
+  const windowHeight = window.innerHeight;
+  const boxes = document.querySelectorAll('.box');
+
+  if (isMobile) {
+    // スマホ用の処理
+    boxes.forEach(function (box) {
+      const distanceToBox = box.offsetTop;
+      if (scroll + windowHeight - 50 > distanceToBox) {
+        box.classList.add('is-active');
+      }
+    });
+  } else {
+    // デスクトップ用の処理
+    boxes.forEach(function (box) {
+      const distanceToBox = box.offsetTop;
+      if (scroll + windowHeight - 200 > distanceToBox) {
+        box.classList.add('is-active');
+      }
+    });
+  }
+});
 
