@@ -156,8 +156,10 @@ img {
 }
 .img-sp {
     border-radius: 40%;
+    width: 300px;
     height: 300px;
    margin-bottom: 20px;
+   
 }
 @media screen and (min-width:768px) {
     .img-sp {
@@ -171,6 +173,10 @@ img {
     .text {
         max-width: 400px;
         padding-left: 10px;
+    }
+    .img-box {
+        width: 90%; /* モバイルでは幅を縮小 */
+        margin: 0 auto;
     }
     }           
 .content .image {

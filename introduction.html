@@ -20,12 +20,24 @@
     /* position: fixed; */
     width: 100%;
 }
+@media  screen and (max-width: 768px)  {
+    .yousyouki {
+      flex-direction: column;
+      text-align: left;
+    }
+}
 .koukou {
     display: flex;
     flex-direction: row;
     text-align: center;
     /* position: fixed; */
     width: 100%; 
+}
+@media  screen and (max-width: 768px)  {
+    .koukou {
+      flex-direction: column;
+      text-align: left;
+    }
 }
 .genzai {
     display: flex;
@@ -34,11 +46,25 @@
     /* position: fixed; */
     width: 100%; 
 }
+@media  screen and (max-width: 768px)  {
+    .genzai {
+      flex-direction: column;
+      text-align: left;
+      margin-bottom: 20px;
+    }
+}
 .rairekinobun {
     padding-top: 250px;
     padding-left: 100px;
     top: 50%;
     font-size: 50px;
+}
+@media screen and (max-width: 768px) {
+  .rairekinobun{
+    font-size: 30px;
+    padding-top: 30px;
+    padding-left: 10px;
+  }
 }
 #photo {
     width: 500px;
@@ -393,12 +419,7 @@ text-decoration: none;
     </main>
     <footer>
         <p>© 叶 竣太</p>
-        <div class="social-icons">
-            <span>📺</span>
-            <span>📷</span>
-            <span>💬</span>
-            <span>🔗</span>
-        </div>
+        
     </footer>
 </body>
 </html>
