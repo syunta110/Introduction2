@@ -184,6 +184,7 @@ img {
     }
     main {
         overflow: hidden;
+        overflow-x: hidden;
     }
     }           
 .content .image {
