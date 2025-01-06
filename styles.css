@@ -42,7 +42,7 @@ img {
 .text-overlay {
     position: absolute; /* 親要素を基準に配置 */
     top: 50%; /* 縦方向の中央 */
-    left: 40%; /* 横方向の中央 */
+    left: 50%; /* 横方向の中央 */
     transform: translate(-50%, -50%); /* 中央揃え */
     color: #333; /* 文字色 */
     -webkit-text-stroke: 1px #fff;
@@ -166,6 +166,7 @@ img {
         display: none;
     }
 }
+
 @media screen and (max-width: 768px) {
     .content {
         flex-flow: column;
@@ -177,6 +178,12 @@ img {
     .img-box {
         width: 90%; /* モバイルでは幅を縮小 */
         margin: 0 auto;
+    }
+    body {
+        /* overflow-x: hidden; */
+    }
+    main {
+        overflow: hidden;
     }
     }           
 .content .image {
