@@ -64,3 +64,21 @@ window.addEventListener('scroll', function () {
   }
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const swiper = new Swiper('.swiper', {
+    loop: true, // スライドをループ
+    autoplay: {
+      delay: 3000, // 自動再生の間隔
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+});
+
